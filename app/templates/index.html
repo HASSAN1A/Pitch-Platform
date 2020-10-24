@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% import 'macros.html' as macro%}
+
+{%block header%}
+  <div class="header text-center">
+    <div class="container mt-5 mx-auto">
+      <div class="inner text-white pt-5">
+        <h1 class="logo-name">Make Magical moments,</h1>
+        <h2>just a few seconds away.</h2>
+        <p>Make your pitch now!!</p>
+        <a href="{{url_for('main.new_pitch')}}"><button type="button" class="btn btn-success">PITCH IDEA</button></a>
+      </div>
+    </div>
+  </div>
+{%endblock%}
+
+{%block content%}
+  <div class="mt-4 categories">
+    <span class="badge badge-warning">CATEGORIES</span>
+    <h2 class="mt-1">Explore Pitches by category</h2>
+    <div class="p-3 my-1">
+      <a href="{{url_for('main.index')}}"><span class="badge badge-pill badge-default">ALL</span></a>
+      <a href="{{url_for('main.pitch_by_category',category_name='Investors')}}"><span class="badge badge-pill badge-primary">INVESTORS</span></a>
+      <a href="{{url_for('main.pitch_by_category',category_name='Customers')}}"><span class="badge badge-pill badge-secondary">CUSTOMERS</span></a>
+      <a href="{{url_for('main.pitch_by_category',category_name='Sales')}}"><span class="badge badge-pill badge-success">SALES</span></a>
+      <a href="{{url_for('main.pitch_by_category',category_name='Employees')}}"><span class="badge badge-pill badge-info">EMPLOYEES</span></a>
+      <a href="{{url_for('main.pitch_by_category',category_name='Partners')}}"><span class="badge badge-pill badge-warning">PARTNERS</span></a>
+      <a href="{{url_for('main.pitch_by_category',category_name='Competitors')}}"><span class="badge badge-pill badge-danger">COMPETITORS</span></a>
+      <a href="{{url_for('main.pitch_by_category',category_name='Other')}}"><span class="badge badge-pill badge-light">OTHER</span></a>
+    </div>
+  </div>
+
+
+  <div class="pitches jumbotron">
+    
+  {%if pitches%}  
+    {{macro.displayPitches(pitches)}}
+  {%else%}
+    <div class="card pitch mx-4 mb-3">
+      <div class="card-body">
+        <h4 class="card-header">Sorry, there is no pitch posted </h4>
+      </div>
+    </div>
+  {%endif%}  
+  </div>
+{%endblock%}

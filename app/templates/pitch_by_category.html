@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{%block content%}
+{% import 'macros.html' as macro%}
+  <h3 class="text-center mt-2"><strong>{{category}} Pitches</strong></h3>
+  <div class="pitches mt-3 jumbotron">
+    
+  {%if pitches%}  
+    {{macro.displayPitches(pitches)}}
+  {%else%}
+    <div class="card pitch mx-4 mb-3">
+      <div class="card-body">
+        <h4 class="card-header"><i class="far fa-angry mr-2"></i>Sorry, there is no pitch posted in this category </h4>
+      </div>
+    </div>
+  {%endif%}  
+  </div>
+{%endblock%}

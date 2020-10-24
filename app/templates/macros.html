@@ -1,0 +1,38 @@
+{% macro displayPitches(pitches) %}
+<div class="row">
+  {% for pitch in pitches %}
+    
+  <div class="col-lg-3 col-md-4 col-sm-12 pitch mx-auto mb-3">
+ 
+    <div class="card text-center card-cascade wider">
+      <div class="pb-4 view view-cascade gradient-card-header blue-gradient overlay waves-light">
+        <h2 class="card-header-title">{{pitch.pitch_title}}</h2>
+        <div class="text-center">
+          <a href="#" class="badge badge-default">{{pitch.user.username}}</a>
+          <a href="{{url_for('main.pitch_by_category',category_name=pitch.pitch_category)}}" class="badge badge-info">{{pitch.pitch_category}}</a>
+        </div>
+        <div class="text-center">
+          <a href="{{url_for('main.pitch_details',pitch_id=pitch.id)}}"><span class="badge badge-success ml-2"> <i class="far fa-thumbs-up"> {{pitch.pitch_upvotes}}</i></span></a>
+          <a href="{{url_for('main.pitch_details',pitch_id=pitch.id)}}"><span class="badge badge-danger ml-2"> <i class="far fa-thumbs-down"> {{pitch.pitch_downvotes}}</i></span></a>
+          <a href="{{url_for('main.pitch_details',pitch_id=pitch.id)}}"><span class="badge badge-info ml-2"> <i class="far fa-comment"> {{pitch.pitch_comments_count}}</i></span></a> 
+        </div>
+        <p class="mb-0 mt-3"><i class="far fa-calendar mr-2"></i>{{pitch.posted.strftime("%b %d %Y %H:%M")}}</p>
+      
+      </div>
+      <div class="card-body card-body-cascade text-center pb-5 pt-5">
+        <p class="card-text">{{pitch.pitch_body}}.</p>
+      </div>
+      <div class="card-footer text-muted text-center mt-4 p-2">
+        <a href="{{url_for('main.pitch_details',pitch_id=pitch.id)}}" class="black-text">
+          <h6>Leave a Comment <i class="fas fa-angle-double-right"></i></h6>
+        </a>
+      </div>
+      
+    </div>
+
+  </div>
+{% endfor %}
+</div>
+
+
+{% endmacro %}

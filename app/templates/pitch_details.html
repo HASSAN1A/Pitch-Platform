@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% import 'bootstrap/wtf.html' as wtf %}
+{%block content%}
+  <div class="mt-5 jumbotron">
+    <h4 class="text-center mt-0 pt-0 mb-3"><strong>{{pitch.pitch_title}} Pitch</strong></h4>
+    <div class="row pt-3">
+      <div class="col-lg-6 col-md-6 col-sm-12 card text-center card-cascade wider pitch mx-auto mb-3">
+        <div class="pb-4 view view-cascade gradient-card-header blue-gradient overlay waves-light">
+          <h2 class="card-header-title">{{pitch.pitch_title}}</h2>
+          <div class="text-center">
+            <a href="#" class="badge badge-default">{{pitch.user.username}}</a>
+            <a href="{{url_for('main.pitch_by_category',category_name=pitch.pitch_category)}}" class="badge badge-info">{{pitch.pitch_category}}</a>
+          </div>
+          <div class="text-center">
+            <a href="{{url_for('main.pitch_upvote',pitch_id=pitch.id)}}"><span class="badge badge-success ml-2"> <i class="far fa-thumbs-up"> {{pitch.pitch_upvotes}}</i></span></a>
+            <a href="{{url_for('main.pitch_downvote',pitch_id=pitch.id)}}"><span class="badge badge-danger ml-2"> <i class="far fa-thumbs-down"> {{pitch.pitch_downvotes}}</i></span></a>
+            <span class="badge badge-info ml-2"> <i class="far fa-comment"> {{pitch.pitch_comments_count}}</i></span>
+          </div>
+          <p class="mb-0 mt-3"><i class="far fa-calendar mr-2"></i>{{pitch.posted.strftime("%b %d %Y %H:%M")}}</p>
+        
+        </div>
+        <div class="card-body card-body-cascade text-center pb-5 pt-5">
+          <p class="card-text">{{pitch.pitch_body}}.</p>
+        </div>
+      </div>
+      <div class="comments jumbotron col-lg-6 col-md-6 col-sm-12 mx-auto">
+        <h3>Comments</h3>
+        <div class="my-2">
+        {%if comments%}
+        {%for comment in comments%}
+          <div class="chip">
+            <img src="{{url_for('static',filename=comment.user.profile_pic_path)}}" onerror="this.onerror=null;this.src='https://www.iconfinder.com/data/icons/user-pictures/100/unknown-512.png';" alt="Contact Person">{{format_comments[loop.index-1]|safe}}
+          </div>
+        {%endfor%}  
+        {%else%}
+        <div class="chip">
+          <p>No Comments</p> 
+        </div>
+        {%endif%}
+        </div>
+      </div>
+    </div>
+    {{wtf.quick_form(comment_form)}}
+    {{simplemde.load}}
+  </div>
+{%endblock%}

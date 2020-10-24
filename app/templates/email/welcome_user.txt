@@ -1,0 +1,3 @@
+Hello {{user.username}}
+Welcome to Pitch platform
+This is where you can post pitch of your choice.

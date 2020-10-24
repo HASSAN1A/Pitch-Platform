@@ -1,0 +1,58 @@
+<nav class="mb-1 navbar navbar-expand-lg navbar-dark fixed-top">
+  <div class="navbar-translate">
+    <a class="navbar-brand text-white" href="/"><h4><span class="badge badge-dark"><i class="fas fa-pen mr-1"></i>Pitch platform</span></h4></a>
+  </div>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-333"
+    aria-controls="navbarSupportedContent-333" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent-333">
+    <ul class="navbar-nav mr-auto text-white">
+      <li class="nav-item ">
+        <a class="dropdown-item" href="/">Home
+        </a>
+      </li>
+      <li class="nav-item ">
+        <a class="dropdown-item" href="{{url_for('main.pitch_by_category',category_name='Investors')}}">Investors</a>
+      </li>
+      <li class="nav-item ">
+        <a class="dropdown-item" href="{{url_for('main.pitch_by_category',category_name='Customers')}}">Customers</a>
+      </li>
+      <li class="nav-item ">
+        <a class="dropdown-item" href="{{url_for('main.pitch_by_category',category_name='Sales')}}">Sales</a>
+      </li>
+      <li class="nav-item ">
+        <a class="dropdown-item" href="{{url_for('main.pitch_by_category',category_name='Employees')}}">Employees</a>
+      </li>
+      <li class="nav-item ">
+        <a class="dropdown-item" href="{{url_for('main.pitch_by_category',category_name='Partners')}}">Partners</a>
+      </li>
+      <li class="nav-item ">
+        <a class="dropdown-item" href="{{url_for('main.pitch_by_category',category_name='Competitors')}}">Competitors</a>
+      </li>
+      <li class="nav-item ">
+        <a class="dropdown-item" href="{{url_for('main.pitch_by_category',category_name='Other')}}">Others</a>
+      </li>
+    </ul>
+    <ul class="navbar-nav ml-auto">
+      {% if current_user.is_authenticated %}
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          <i class="fas fa-user"></i>
+        </a>
+        <div class="dropdown-menu dropdown-menu-right dropdown-default"
+          aria-labelledby="navbarDropdownMenuLink-333">
+          <a class="dropdown-item" href="{{url_for('main.profile',username=current_user.username)}}"><span class="badge badge-primary">{{current_user.username | capitalize}} <i class="fas fa-user"></i></span></a>
+          <a class="dropdown-item" href="{{url_for('auth.logout')}}">Sign Out <i class="fas fa-sign-out-alt"></i></a>
+        </div>
+      </li>
+      {%else%}
+      <li class="nav-item">
+        <a class="nav-link" href="{{url_for('auth.login')}}">Sign in
+        </a>
+      </li>
+      {%endif%}
+    </ul>
+  </div>
+</nav>
