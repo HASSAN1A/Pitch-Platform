@@ -2,7 +2,7 @@ The Star And Thank Author License (SATA)
 
 Copyright (c) [2020] [Hassan Juma](https://https://github.com/HASSAN1A) <okothhassanjuma@gmail.com>
 
-Project Url:https://github.com/HASSAN1A/News-App
+Project Url:https://github.com/HASSAN1A/Pitch-Platform
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
