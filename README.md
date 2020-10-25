@@ -1,36 +1,37 @@
 # NEWS APP
 
-#### A Python web application which shows news articles from various sources using the News API
+#### A Python web application which shows ptches from various users.
 
 ![Description](app.png)
 
-#### Live link:https://news-app11.herokuapp.com/
+#### Live link:
+
 
 ## Description
 
-An application which shows news articles from various sources using the [News API](https://newsapi.org/), it is made by python web framework, Flask.
+An application which shows pitches from various categories using the python web framework, Flask.
 
 ## User Stories
 
-- A user I can view various news sources on the homepage of the application.
-- A user can select a news source and see all news articles from the selected news source in the application.
-- A user can search for a news article on the homepage.
-- A user can see the image, description,author and the time a news article was created.
-- A can click on an article and read the full article on the source website.
+- A user I can view various pithes on the homepage of the application.
+- A user can select a pitch and see pitch details from the selected pitch in the application.
+- A user can search for a pitch on the homepage.
+- A user can see the image, description,author and the time a pitch was created.
+- A can click on an article and read the full pitch on the source website.
 
 ## Behaviour Driven Development (BDD)
 
 | Behaviour                                                                                        |                                                                      Input                                                                       |                                                                                                 Output |
 | ------------------------------------------------------------------------------------------------ | :----------------------------------------------------------------------------------------------------------------------------------------------: | -----------------------------------------------------------------------------------------------------: |
-| Page loads, user arrives in the landing page, a list of all available news sources is displayed. | The user can click on any particular list group item to be directed to a separate page containing news highlights curated by the same publisher. | On clicking the "read more" button, the user is redirected to the main article to read the full story. |  |
+| Page loads, user arrives in the landing page, a list of all available pitch category is displayed. | The user can click on any particular list group item to be directed to a separate page containing pitch highlights pitched by the same publisher. | On clicking the "make a pitch" button, the user is redirected to the main login and signup to allow you make a pitch of ua choice. |  |
 
 ## Features
 
 Here are the summary:
 
-- A landing page showing top world headline news and search bar.
-- Clickable news sources which direct the user to a page with article highlights from the particular source.
-- Clickable news articles which direct the user to the source website to read full article details
+- A landing page showing pitch categories.
+- Clickable pitches which direct the user to a page with pitch highlights from the particular pitch.
+
 
 ## Requirements
 
@@ -55,11 +56,13 @@ If you'd like to request a new function, feel free to do so by opening an issue 
 
 ## Built with
 
-1. [Python 3.8.2](https://www.python.org/doc/)
-2. [Flask; Python framework used.](https://flask.palletsprojects.com/en/1.1.x/)
-3. [HTML](https://www.w3schools.com/html/)
-4. [CSS](https://www.w3schools.com/css/)
-5. [MDB 4.8.10](https://mdbootstrap.com/)
+1. [Python 3.8.2](https://www.python.org/doc/):Programming language.
+2. [Flask; Python framework used.](https://flask.palletsprojects.com/en/1.1.x/):Framework used.
+3. [HTML](https://www.w3schools.com/html/):Layout.
+4. [CSS](https://www.w3schools.com/css/):Styling.
+5. [Bootstrap](https://mdbootstrap.com/):For responsive websites.
+6. [posgreSQL](https://www.postgresql.org/):Database language.
+7. [psycopg2](https://pypi.org/project/psycopg2/):Database driver.
 
 ## TEAM
 
