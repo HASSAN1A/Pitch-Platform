@@ -4,7 +4,7 @@
 
 ![Description](app.png)
 
-#### Live link:
+#### Live link : https://pitchplatform.herokuapp.com/
 
 
 ## Description
