@@ -50,8 +50,8 @@ To fix a bug or enhance an existing module, follow these steps:
 
 ### Bug / Feature Request
 
-If you find a bug (the website couldn't handle the query and / or gave undesired results), kindly open an issue [here](https://github.com/HASSAN1A/News-App/issues/new) by including your search query and the expected result.
-If you'd like to request a new function, feel free to do so by opening an issue [here](https://github.com/HASSAN1A/News-App). Please include sample queries and their corresponding results.
+If you find a bug (the website couldn't handle the query and / or gave undesired results), kindly open an issue [here](https://github.com/HASSAN1A/Pitch-Platform/issues/new) by including your search query and the expected result.
+If you'd like to request a new function, feel free to do so by opening an issue [here](https://github.com/HASSAN1A/Pitch-Platform). Please include sample queries and their corresponding results.
 
 ## Built with
 
@@ -65,6 +65,6 @@ If you'd like to request a new function, feel free to do so by opening an issue 
 
 [Hassan Juma ](https://github.com/HASSAN1A)
 
-## [License](https://github.com/HASSAN1A/News-App/blob/master/LICENSE.md)
+## [License](https://github.com/HASSAN1A/Pitch-Platform/blob/master/LICENSE.md)
 
-[MIT](https://github.com/HASSAN1A/News-App/blob/master/LICENSE.md) © [Hassan Juma](https://github.com/HASSAN1A)
+[MIT](https://github.com/HASSAN1A/Pitch-Platform/blob/master/LICENSE.md) © [Hassan Juma](https://github.com/HASSAN1A)
