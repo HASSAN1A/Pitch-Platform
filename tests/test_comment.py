@@ -6,7 +6,7 @@ from app import db
 class CommentModelTest(unittest.TestCase):
   def setUp(self):
     self.user_Hassan = User(username = 'Hassan',password = '123456', email = 'a@gmail.com')
-    self.new_pitch = Pitch(pitch_title='Supermarket bs plan',pitch_body='This is a pitch about my new supermarket',pitch_category="Investors",user = self.user_Hassan )
+    self.new_pitch = Pitch(pitch_title='Supermarket',pitch_body='This is a pitch about my new supermarket',pitch_category="Investors",user = self.user_Hassan )
     self.new_comment = Comment(comment='Test Comment',user=self.user_Hassan,pitch=self.new_pitch)
 
   def tearDown(self):

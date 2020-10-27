@@ -6,7 +6,7 @@ from app import db
 class PitchModelTest(unittest.TestCase):
   def setUp(self):
     self.user_Hassan = User(username = 'Hassan',password = '123456', email = 'a@gmail.com')
-    self.new_pitch = Pitch(pitch_title='Supermarket bs plan',pitch_body='This is a pitch about my new supermarket',pitch_category="Investors",user = self.user_Hassan )
+    self.new_pitch = Pitch(pitch_title='Supermarket',pitch_body='This is a pitch about my new supermarket',pitch_category="Investors",user = self.user_Hassan )
 
 
   def tearDown(self):
@@ -18,7 +18,7 @@ class PitchModelTest(unittest.TestCase):
     '''
     Test if the values of variables are correctly being placed.
     '''
-    self.assertEquals(self.new_pitch.pitch_title,'Supermarket bs plan')
+    self.assertEquals(self.new_pitch.pitch_title,'Supermarket')
     self.assertEquals(self.new_pitch.pitch_body,'This is a pitch about my new supermarket')
     self.assertEquals(self.new_pitch.pitch_category,'Investors')
     self.assertEquals(self.new_pitch.user,self.user_Hassan)              
