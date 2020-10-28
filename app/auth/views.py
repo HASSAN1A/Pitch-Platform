@@ -15,6 +15,8 @@ def register():
         db.session.commit()
 
         message = mail_message("Welcome to Pitch platform","email/welcome_user",user.email,user=user)
+        if isinstance (message,dict):
+            return render_template("auth/notsent.html",)
         return redirect(url_for('auth.login'))
         title = "New Account"
     return render_template('auth/register.html',registration_form = form)    
